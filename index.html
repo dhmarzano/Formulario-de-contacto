@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!--CABECERA-->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Diego M." />
+    <meta name="description" content="formulario de contacto" />
+    <meta name="keywords" content="formulario,contacto" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <!--FONTS DE GOOGLE-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap" rel="stylesheet">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--Titulo-->
+    <title>HTML + CSS + Responsive: Formulario</title>
+</head>
+
+<body>
+    <!-- Consigna 1-2 -->
+    <div class="container">
+
+        <header class="fila">
+            <H1 id="title" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 ">Registro de mascotas</H1>
+            <p id="description" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 header-des">Favor complete los
+                datos
+                correspondientes para registrar a su mascota</p>
+        </header>
+
+        <div class="col-xl-4 col-lg-4 col-md-0 col-sm-0 col-xs-0"></div>
+        <!-- Consigna 3 -->
+        <form id="survey-form" class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12">
+            <!-- consigna 4 -->
+            <label id="name-label" for="name">Nombre</label>
+            <input type="text" name="name" id="name" class="form-control" placeholder="Nombre*" required />
+
+            <label id="raza-label" for="raza">Raza</label>
+            <input type="text" name="raza" id="raza" class="form-control" placeholder="Raza*" required />
+
+            <label id="color-label" for="color">Color</label>
+            <input type="text" name="color" id="color" class="form-control" placeholder="Color*" required />
+
+            <!-- consigna 5-6 -->
+            <label id="email-label" for="email">Email</label>
+            <input type="email" name="email" id="email" class="form-control" placeholder="Correo electronico*"
+                required />
+
+            <!-- consigna 7 -->
+            <label id="number-label" for="number">Edad<span class="clue">(opcional)</span></label>
+            <input type="number" name="number" id="number" class="form-control" min="0" max="99" placeholder="Edad" />
+
+            <!-- consigna 12 -->
+            <p id="option-label">¿Su mascota convive con otras mascotas?</p>
+            <select id="dropdown" name="role" class="form-control" required>
+                <option disabled selected value>Favor seleccione una opción</option>
+                <option value="si">Si</option>
+                <option value="no">No</option>
+            </select>
+
+            <!-- consigna 13 -->
+            <p id="buton-label">Sexo</p>
+            <label class="label"><input name="user-recommend" value="macho" type="radio" class="input-radio"
+                    checked />Macho</label>
+            <label class="label"><input name="user-recommend" value="hembra" type="radio"
+                    class="input-radio" />Hembra</label>
+
+            <!-- consigna 14 -->
+            <label class="label"><input name="prefer" value="si-recibo" type="checkbox" class="input-checkbox" />
+                ¿Le gustaria recibir mas información sobre el registro de mascotas?</label>
+            <label class="label"><input name="prefer" value="si-acepto" type="checkbox" class="input-checkbox" />
+                Acepto las politicas de privacidad del sitio presente</label>
+
+            <!-- consigna 15 -->
+            <p class="label">Cuentenos como describe a su mascota</p>
+            <textarea id="comentarios" class="input-textarea" name="comentarios"
+                placeholder="Escriba aqui..."></textarea>
+
+            <!-- consgina 16 -->
+            <button type="submit" id="submit" class="submit-button">Enviar </button>
+        </form>
+    </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>

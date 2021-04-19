@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", serif;
+  text-align: center;
+}
+
+.container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  color: #f3f3f3;
+}
+
+/* imagen de fondo fija */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient(
+      to bottom,
+      rgb(43, 46, 74, 50%),
+      rgb(232, 69, 69, 40%)
+    ),
+    url("../img/fondo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* aplica a cada fila  */
+.fila {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: auto;
+  clear: both;
+  display: table;
+}
+
+/* descripcion */
+.header-des {
+  font-size: 1.3rem;
+  font-style: italic;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 40%);
+}
+
+/* caja de formulario */
+#survey-form {
+  padding: 2.5rem;
+  background-color: rgba(221, 52, 23, 0.6);
+  border-radius: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* etiquetas */
+label[id*="-label"],
+p[id*="-label"],
+.label {
+  display: block;
+  text-align: left;
+  margin: 0.7rem 0 1rem;
+  font-size: 1.1rem;
+}
+
+/* radio buttons */
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+/* area de texto */
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+
+/* contenido de formulario */
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* boton */
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  background: inherit;
+  background-color: rgb(255, 175, 27);
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  color: #f3f3f3;
+  font-size: 1.5rem;
+}
+
+.submit-button:hover{
+    background-color: rgb(255, 218, 52);
+    box-shadow: 0 0 0 0.2rem rgba(241, 89, 0, 0.25);
+}
+
+/* aplica a todas las columnas  */
+[class*="col-"] {
+  float: left;
+  padding: 10px;
+}
+
+/* media querys */
+/* extra large  */
+@media (min-width: 1200px) {
+  .col-xl-12 {
+    width: 100%;
+  }
+  .col-xl-4 {
+    width: 33.33333333%;
+  }
+}
+/* large  */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .col-lg-12 {
+    width: 100%;
+  }
+  .col-lg-4 {
+    width: 33.33333333%;
+  }
+}
+
+/* medium */
+@media (min-width: 768px) and (max-width: 991px) {
+  .col-md-12 {
+    width: 100%;
+  }
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+  .col-md-0 {
+    display: none;
+  }
+
+  .container {
+    max-width: 70%;
+  }
+}
+
+/* small */
+@media (min-width: 576px) and (max-width: 767px) {
+  .col-sm-12 {
+    width: 100%;
+  }
+  .col-sm-4 {
+    width: 33.33333333%;
+  }
+  .col-md-0 {
+    display: none;
+  }
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* extra small */
+@media (max-width: 575px) {
+  .col-xs-12 {
+    width: 100%;
+  }
+  .col-xs-4 {
+    width: 33.33333333%;
+  }
+  .col-md-0 {
+    display: none;
+  }
+  .container {
+    max-width: 90%;
+  }
+}
